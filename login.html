@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>संग्रहालय</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      cursor: none;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #0B0E21;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      max-width: 800px;
+      width: 90%;
+      padding: 20px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .left-section {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .left-section h1 {
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+    .left-section p {
+      font-size: 14px;
+      color: #B0B0B0;
+      margin: 10px 0 20px;
+    }
+
+    .left-section button {
+      background-color: #FF6A3D;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .left-section button:hover {
+      background-color: #FF8A5B;
+    }
+
+    .right-section {
+      flex: 1;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .right-section h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .input-group {
+      margin-bottom: 15px;
+    }
+
+    .input-group label {
+      display: block;
+      font-size: 14px;
+      color: #B0B0B0;
+      margin-bottom: 5px;
+    }
+
+    .input-group input,
+    .input-group select {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background: #333;
+      color: #fff;
+      font-size: 16px;
+    }
+
+    .sign-up-btn {
+      background-color: #FF6A3D;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+    }
+
+    .sign-up-btn:hover {
+      background-color: #FF8A5B;
+    }
+
+    /* Cursor-follow effect */
+    .cursor {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: #FF6A3D;
+      pointer-events: none;
+      transition: transform 0.1s ease;
+    }
+  </style>
+  
+</head>
+<body>
+  <div class="container">
+    <!-- Left Section -->
+    <div class="left-section">
+      <h1>Create New Account</h1>
+      <p>Already Registered?<b><u> Login</u></b></p>
+      <p>Welcome to the one-step solution where you can list your data to avoid that bustle of management.<br> <h3>Here To manage wisely !!</h3></p>
+      <button>Learn More</button>
+    </div>
+
+    <!-- Right Section -->
+    <div class="right-section">
+      <h2>Login !!</h2>
+      
+      <div class="input-group">
+        <label for="name"><b>Library Name</b></label>
+        <input type="text" id="name" placeholder="XYZ Library">
+      </div>
+      
+      <div class="input-group">
+        <label for="email"><b>Email</b></label>
+        <input type="email" id="email" placeholder="hello@gmail.com">
+      </div>
+      
+      <div class="input-group">
+        <label for="Area"><b>City</b></label>
+        <input type="text" id="Area" placeholder="Agra">
+      </div>
+      
+      <div class="input-group">
+        <label for="country"><b>Country</b></label>
+        <select id="country">
+          <option>Select</option>
+          <option>India</option>
+          <option>United States Of America</option>
+          <option>Pakistan</option>
+          <option>Russia</option>
+          <!-- Add more options as needed -->
+        </select>
+      </div>
+
+      <button class="sign-up-btn"><a href="index.html">Sign Up</a>
+        </button>
+    </div>
+  </div>
+
+  <!-- Cursor-follow element -->
+  <div class="cursor" id="cursor"></div>
+
+  <script>
+    // Cursor-follow effect
+    document.addEventListener('mousemove', (e) => {
+      const cursor = document.getElementById('cursor');
+      cursor.style.left = e.pageX + 'px';
+      cursor.style.top = e.pageY + 'px';
+    });
+  </script>
+</body>
+</html> 

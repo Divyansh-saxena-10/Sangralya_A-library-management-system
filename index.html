@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>संग्रहालय</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1><b>संग्रहालय</b> Dashboard</h1>
+        <form id="resourceForm">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="text" id="resource" placeholder="Book ID" required>
+            <input type="number" id="quantity" placeholder="Quantity" required min="1">
+            <button type="submit"><b>Add</b></button>
+        </form>
+
+        <form id="searchForm">
+            <input type="text" id="searchInput" placeholder="Enter Book ID" required>
+            <button type="submit"><b>Search</b></button>
+        </form>
+        <p id="searchMessage"></p>
+
+        <h2>Record</h2>
+        <table id="resourceTable">
+            <thead>
+                <tr>
+                    <th>Insertion ID</th>
+                    <th>Name</th>
+                    <th>Book ID</th>
+                    <th>Quantity</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dynamic content will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
